@@ -1,4 +1,4 @@
-NiFi Example: Load CSV file into RDBMS Table using the traditional way and the new way using Record
+NiFi Example: Load CSV file into Cassandra Table using the traditional way and the new way using Record
 Example Data
 Ingested to the example flows by GenerateFlowFile:
 
@@ -19,18 +19,18 @@ create table cities (
 Traditional way
 Upto Apache NiFi ver 1.2.0, I'd use ConvertCSVToAvro, then Avro to JSON, finally JSON to SQL. There maybe other solutions to load a CSV file with different processors, but you need to use multiple processors together.
 
-See the 1_screenshot.png and Load_CSV_to_Table.xml template for detail.
+
 
 With Record
 Since Apache NiFi ver 1.3.0, new Record concept has been introduced. With Record, you can read/write different data format such as CSV/Avro/JSON ... etc. As shown in this example, several processors were also added to process Records, e.g. PutDatabaseRecord or ConvertRecord.
 
 With Record aware processors, you don't have to convert data format as we had to do before. You can construct simpler and more efficient data flows.
 
-See the 2_screenshot_with_record.png and Load_CSV_to_Table_with_Record.xml template for detail.
 
 
 
- Load_CSV_to_Table.xml
+
+ Load_CSV_to_cassandra_Table.xml
 <?xml version="1.0" ?>
 <template encoding-version="1.1">
   <description></description>
