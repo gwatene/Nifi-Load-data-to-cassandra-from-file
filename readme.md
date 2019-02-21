@@ -28,7 +28,7 @@ With Record aware processors, you don't have to convert data format as we had to
 
 
 
-![](https://github.com/gwatene/image/blob/master/nifif%20example.png)
+
 
  Load_CSV_to_cassandra_Table.xml
 <?xml version="1.0" ?>
